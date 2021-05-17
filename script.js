@@ -371,8 +371,24 @@ function factorString(num){
 }
 
 console.log('Q18');
-console.log(factorString(28));
+console.log(factorString(30));
 console.log("");
 
 /* 19)
 Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC */
+
+function acronym(string){
+    let arrayWord =[]
+    let first = []
+    arrayWord = string.split(" ")
+    console.log(arrayWord);
+    console.log(arrayWord[1].slice(0,1));
+    for(let i=0; i<arrayWord.length; i++){
+        first.push(arrayWord[i].slice(0,1))
+    }
+   return first.join('').toUpperCase()
+}
+
+console.log('Q19');
+console.log(acronym("I love Strive School"));
+console.log("");

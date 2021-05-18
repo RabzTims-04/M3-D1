@@ -356,18 +356,24 @@ this would be a "DiegoRiccardo".
 this would be "34". */
 
 function factorString(num){
+
+    let string =""
+
     if(num%3 === 0){
-        console.log("Diego");
+        string += "Diego"
     }
-    else if(num%5 === 0){
-        console.log("Riccardo");
+    if(num%5 === 0){
+        string += "Riccardo"
     }
-    else if(num%7 === 0){
-        console.log("Stefano");
+    if(num%7 === 0){
+        string += "Stefano"
     }
-    else{
-        console.log(`${num}`);
+
+    if((num%3 !==0)&&(num%5 !== 0)&&(num%7 !== 0)){
+       string += num.toString()
     }
+
+    return string
 }
 
 console.log('Q18');
